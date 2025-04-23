@@ -2,7 +2,6 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -53,24 +52,13 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))'
-        },
         metadesk: {
           purple: '#9b87f5',
-          'dark-purple': '#7c67d6',
-          'light-purple': '#d3c6ff',
+          'dark-purple': '#7E69AB',
+          'light-purple': '#D3E4FD',
           gray: '#8E9196',
-          'light-blue': '#D3E4FD',
           'soft-green': '#F2FCE2',
-          'light-gray': '#F1F1F1'
+          'light-gray': '#F1F1F1',
         },
       },
       borderRadius: {
