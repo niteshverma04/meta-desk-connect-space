@@ -28,8 +28,18 @@ export default function AuthForm() {
         const { error } = await supabase.auth.signUp({
           email,
           password,
+          options: {
+            emailRedirectTo: window.location.origin,
+          }
         });
-        if (error) throw error;
+        
+        if (error) {
+          if (error.message.includes('already registered')) {
+            throw new Error('This email is already registered. Please sign in instead.');
+          }
+          throw error;
+        }
+        
         toast({
           title: "Success!",
           description: "Please check your email to verify your account."
@@ -39,18 +49,22 @@ export default function AuthForm() {
           email,
           password,
         });
-        if (error) throw error;
+        
+        if (error) {
+          if (error.message.includes('Invalid login credentials')) {
+            throw new Error('Invalid email or password. Please check your credentials and try again.');
+          }
+          throw error;
+        }
+        
         navigate('/');
       }
     } catch (error: any) {
       console.error('Authentication error:', error);
       
-      let errorMessage = error.message;
-      if (error.message.includes('Invalid login credentials')) {
-        errorMessage = 'Invalid email or password. Please check your credentials and try again.';
-      }
-      
+      const errorMessage = error.message || 'An error occurred during authentication';
       setAuthError(errorMessage);
+      
       toast({
         title: "Error",
         description: errorMessage,
@@ -89,6 +103,7 @@ export default function AuthForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          minLength={6}
         />
       </div>
       <Button type="submit" className="w-full" disabled={isLoading}>
