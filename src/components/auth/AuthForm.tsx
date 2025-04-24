@@ -6,18 +6,22 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertCircle } from 'lucide-react';
 
 export default function AuthForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
   const { toast } = useToast();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setAuthError(null);
 
     try {
       if (isSignUp) {
@@ -39,9 +43,17 @@ export default function AuthForm() {
         navigate('/');
       }
     } catch (error: any) {
+      console.error('Authentication error:', error);
+      
+      let errorMessage = error.message;
+      if (error.message.includes('Invalid login credentials')) {
+        errorMessage = 'Invalid email or password. Please check your credentials and try again.';
+      }
+      
+      setAuthError(errorMessage);
       toast({
         title: "Error",
-        description: error.message,
+        description: errorMessage,
         variant: "destructive"
       });
     } finally {
@@ -51,6 +63,13 @@ export default function AuthForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {authError && (
+        <Alert variant="destructive" className="mb-6">
+          <AlertCircle className="h-4 w-4 mr-2" />
+          <AlertDescription>{authError}</AlertDescription>
+        </Alert>
+      )}
+      
       <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
@@ -79,10 +98,13 @@ export default function AuthForm() {
         type="button"
         variant="ghost"
         className="w-full"
-        onClick={() => setIsSignUp(!isSignUp)}
+        onClick={() => {
+          setIsSignUp(!isSignUp);
+          setAuthError(null);
+        }}
       >
         {isSignUp ? 'Already have an account? Sign In' : 'Need an account? Sign Up'}
       </Button>
     </form>
   );
-};
+}
