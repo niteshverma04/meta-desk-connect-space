@@ -4,9 +4,13 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Navigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const { user } = useAuth();
+  const { user, isEmailVerified } = useAuth();
 
-  if (user) {
+  if (user && !isEmailVerified) {
+    return <Navigate to="/verify" replace />;
+  }
+
+  if (user && isEmailVerified) {
     return <Navigate to="/" replace />;
   }
 
