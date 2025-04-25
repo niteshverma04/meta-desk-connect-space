@@ -15,12 +15,12 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground">
       <div className="w-full max-w-md px-4">
-        <h1 className="text-4xl font-bold mb-8 text-metadesk-purple text-center">
+        <h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-metadesk-purple to-metadesk-dark-purple">
           Welcome Back
         </h1>
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="backdrop-blur-xl bg-black/40 rounded-2xl shadow-lg p-8 border border-metadesk-purple/30 shadow-[0_4px_20px_-2px_rgba(155,135,245,0.3)]">
           <AuthForm />
         </div>
       </div>
