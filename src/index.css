@@ -1,43 +1,29 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
+    --background: 240 10% 3.9%; /* Dark background */
+    --foreground: 0 0% 98%; /* Light text color */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
     --primary: 256 100% 85%; /* modern purple */
     --primary-foreground: 0 0% 100%;
     --secondary: 222 14% 93%;
     --secondary-foreground: 240 10% 3.9%;
-
-    --muted: 222 14% 93%;
-    --muted-foreground: 215 20.2% 51.1%;
-    --accent: 210 100% 98%;
-    --accent-foreground: 256 100% 47%;
-
+    --muted: 240 5.9% 10%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 5.9% 10%;
+    --accent-foreground: 0 0% 95.9%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 223 10% 85%;
-    --input: 223 10% 85%;
+    --border: 240 5.9% 10%;
+    --input: 240 5.9% 10%;
     --ring: 256 100% 75%;
     --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 256 100% 70%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 245 90% 92%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 221 13% 91%;
-    --sidebar-ring: 256 100% 75%;
   }
 
   * {
@@ -119,4 +105,3 @@
 }
 .card { padding: 2em; }
 .read-the-docs { color: #888; }
-
