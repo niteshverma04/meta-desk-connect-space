@@ -51,12 +51,11 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* CTAs only, theme toggle removed */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/login" tabIndex={-1}>
               <Button
                 variant="outline"
-                className="border-metadesk-purple text-metadesk-purple hover:bg-metadesk-purple/10"
+                className="border-metadesk-purple text-metadesk-purple hover:bg-metadesk-purple/10 bg-[#F1F0FB]"
               >
                 Login
               </Button>
@@ -95,7 +94,7 @@ const Navbar = () => {
               <Link to="/login" tabIndex={-1} onClick={() => setMobileMenuOpen(false)}>
                 <Button
                   variant="outline"
-                  className="border-metadesk-purple text-metadesk-purple hover:bg-metadesk-purple/10 w-full"
+                  className="border-metadesk-purple text-metadesk-purple hover:bg-metadesk-purple/10 w-full bg-[#F1F0FB]"
                 >
                   Login
                 </Button>
