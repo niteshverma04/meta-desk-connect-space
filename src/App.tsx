@@ -25,15 +25,15 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/welcome" element={<WelcomePage />} />
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/home" element={<Index />} />
             <Route path="/features" element={<FeaturesPage />} />
             <Route path="/personas" element={<PersonasPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/verify" element={<VerificationPage />} />
-            <Route path="*" element={<Navigate to="/welcome" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
@@ -42,4 +42,3 @@ const App = () => (
 );
 
 export default App;
-
