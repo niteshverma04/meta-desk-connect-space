@@ -2,9 +2,9 @@
 import FeaturesSection from "@/components/FeaturesSection";
 
 const FeaturesPage = () => (
-  <div className="min-h-screen flex flex-col bg-[#1A1F2C] text-foreground pt-20 md:pt-24">
+  <div className="min-h-screen flex flex-col bg-[#0E1321] text-foreground pt-20 md:pt-24">
     <div className="container mx-auto px-4 py-8 md:py-16 flex-grow">
-      <div className="max-w-4xl mx-auto backdrop-blur-xl bg-black/60 p-4 sm:p-6 md:p-8 rounded-xl md:rounded-2xl border border-metadesk-purple/30 shadow-[0_4px_20px_-2px_rgba(155,135,245,0.3)]">
+      <div className="max-w-4xl mx-auto backdrop-blur-xl bg-black/70 p-4 sm:p-6 md:p-8 rounded-xl md:rounded-2xl border border-metadesk-purple/40 shadow-[0_4px_20px_-2px_rgba(155,135,245,0.3)]">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-metadesk-purple to-metadesk-dark-purple">
           Features
         </h1>
