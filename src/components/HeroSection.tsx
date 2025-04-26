@@ -63,9 +63,9 @@ const HeroSection = () => {
               Virtual Collaboration
             </span>
             <br />
-            <span>Reimagined for the Future of Work</span>
+            <span className="text-white">Reimagined for the Future of Work</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
             Connect freelancers, companies, and remote employees in an immersive digital workspace designed to foster productivity and collaboration.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
