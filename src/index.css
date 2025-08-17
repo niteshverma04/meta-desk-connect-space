@@ -4,6 +4,29 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 240 10% 8%; /* Rich dark text for excellent contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+    --primary: 256 100% 65%; /* Deeper purple for better contrast */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 97%;
+    --secondary-foreground: 240 10% 8%;
+    --muted: 240 4.8% 97%;
+    --muted-foreground: 240 3.8% 45%; /* Better muted text contrast */
+    --accent: 240 4.8% 97%;
+    --accent-foreground: 240 10% 8%;
+    --destructive: 0 84% 60%; /* Bright red for visibility */
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5.9% 88%; /* Lighter borders for subtle definition */
+    --input: 240 5.9% 88%;
+    --ring: 256 100% 65%; /* Matching ring color */
+    --radius: 0.75rem;
+  }
+
+  .dark {
     --background: 240 10% 3.9%; /* Dark background */
     --foreground: 0 0% 98%; /* Light text color */
     --card: 240 10% 3.9%;

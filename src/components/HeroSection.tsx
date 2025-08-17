@@ -63,9 +63,9 @@ const HeroSection = () => {
               Virtual Collaboration
             </span>
             <br />
-            <span className="text-white">Reimagined for the Future of Work</span>
+            <span className="text-foreground/90">Reimagined for the Future of Work</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-foreground/75 mb-8 max-w-3xl mx-auto">
             Connect freelancers, companies, and remote employees in an immersive digital workspace designed to foster productivity and collaboration.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -77,13 +77,13 @@ const HeroSection = () => {
             </Button>
           </div>
           <div className="mt-12 animate-pulse-soft">
-            <p className="text-sm text-gray-500 mb-2">Trusted by innovative teams worldwide</p>
+            <p className="text-sm text-muted-foreground mb-2">Trusted by innovative teams worldwide</p>
             <div className="flex justify-center items-center flex-wrap gap-8">
               {/* Logos would go here - replaced with placeholders */}
-              <div className="h-8 w-24 bg-gray-200 rounded"></div>
-              <div className="h-8 w-20 bg-gray-200 rounded"></div>
-              <div className="h-8 w-28 bg-gray-200 rounded"></div>
-              <div className="h-8 w-24 bg-gray-200 rounded"></div>
+              <div className="h-8 w-24 bg-muted rounded"></div>
+              <div className="h-8 w-20 bg-muted rounded"></div>
+              <div className="h-8 w-28 bg-muted rounded"></div>
+              <div className="h-8 w-24 bg-muted rounded"></div>
             </div>
           </div>
         </div>
